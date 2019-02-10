@@ -1,11 +1,11 @@
 class Battleship::BoardRenderer
-  def self.call(rows:)
-    new(rows: rows).render
+  def self.call(rows:, show_hidden_ships: false)
+    new(rows: rows, show_hidden_ships: show_hidden_ships).render
   end
 
   attr_reader :rows, :show_hidden_ships
 
-  def initialize(rows:, show_hidden_ships: false)
+  def initialize(rows:, show_hidden_ships:)
     @rows = rows
     @show_hidden_ships = show_hidden_ships
   end

@@ -18,6 +18,13 @@ class Battleship::Board
     Battleship::BoardPlacement.new(ship: ship, cells: coordinate_cells).valid?
   end
 
+  def place_ship(ship:, coordinates:)
+    if valid_placement?(ship: ship, coordinates: coordinates)
+      coordinate_cells = cells_from_coordinates(coordinates: coordinates)
+      coordinate_cells.map { |cell| cell.place_ship(new_ship: ship) }
+    end
+  end
+
   def render(show: false)
     Battleship::BoardRenderer.call(rows: rows, show_hidden_ships: show)
   end

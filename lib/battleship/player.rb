@@ -2,8 +2,8 @@ class Battleship::Player
   attr_reader :board, :ships
 
   def initialize
-    @board = Board.new
-    @ships = [Cruiser.new, Submarine.new]
+    @board = Battleship::Board.new
+    @ships = [Battleship::Ship::Cruiser.new, Battleship::Ship::Submarine.new]
 
     place_ships
   end

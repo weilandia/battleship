@@ -2,4 +2,4 @@
 
 require "battleship"
 
-Battleship::Game.play
+Battleship::Game.new.play

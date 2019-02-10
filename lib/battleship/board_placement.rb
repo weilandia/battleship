@@ -1,5 +1,3 @@
-require_relative "core_extensions/array/increments"
-
 class Battleship::BoardPlacement
   attr_reader :ship, :cells, :rows, :columns
 
