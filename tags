@@ -1,0 +1,76 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/54afb0f/
+Array	lib/battleship/core_extensions/array/increments.rb	/^    module Array$/;"	m	module:Battleship.CoreExtensions
+Battleship	lib/battleship.rb	/^module Battleship$/;"	m
+Battleship	lib/battleship/core_extensions/array/increments.rb	/^module Battleship$/;"	m
+Battleship	lib/battleship/version.rb	/^module Battleship$/;"	m
+Board	lib/battleship/board.rb	/^class Battleship::Board$/;"	c	module:Battleship
+BoardPlacement	lib/battleship/board_placement.rb	/^class Battleship::BoardPlacement$/;"	c	module:Battleship
+BoardRenderer	lib/battleship/board_renderer.rb	/^class Battleship::BoardRenderer$/;"	c	module:Battleship
+Cell	lib/battleship/cell.rb	/^class Battleship::Cell$/;"	c	module:Battleship
+ComputerPlayer	lib/battleship/players/computer_player.rb	/^class Battleship::Player::ComputerPlayer < Player$/;"	c	module:Battleship.Player
+CoreExtensions	lib/battleship/core_extensions/array/increments.rb	/^  module CoreExtensions$/;"	m	module:Battleship
+Cruiser	lib/battleship/ships/cruiser.rb	/^class Battleship::Ship::Cruiser < Ship$/;"	c	module:Battleship.Ship
+Error	lib/battleship.rb	/^  class Error < StandardError; end$/;"	c	module:Battleship
+Game	lib/battleship/game.rb	/^class Battleship::Game$/;"	c	module:Battleship
+HumanPlayer	lib/battleship/players/human_player.rb	/^class Battleship::Player::HumanPlayer < Player$/;"	c	module:Battleship.Player
+Increments	lib/battleship/core_extensions/array/increments.rb	/^      module Increments$/;"	m	module:Battleship.CoreExtensions.Array
+Player	lib/battleship/player.rb	/^class Battleship::Player$/;"	c	module:Battleship
+Ship	lib/battleship/ship.rb	/^class Battleship::Ship$/;"	c	module:Battleship
+Submarine	lib/battleship/ships/submarine.rb	/^class Battleship::Ship::Submarine < Ship$/;"	c	module:Battleship.Ship
+VERSION	lib/battleship/version.rb	/^  VERSION = "0.1.0"$/;"	c
+build_cells	lib/battleship/board.rb	/^    def build_cells$/;"	f	class:Board
+call	lib/battleship/board_renderer.rb	/^  def self.call(rows:)$/;"	S	class:BoardRenderer
+cell_count	lib/battleship/board.rb	/^    def cell_count$/;"	f	class:Board
+cells_from_coordinates	lib/battleship/board.rb	/^    def cells_from_coordinates(coordinates:)$/;"	f	class:Board
+column_count	lib/battleship/board_renderer.rb	/^    def column_count$/;"	f	class:BoardRenderer
+column_key_row	lib/battleship/board_renderer.rb	/^    def column_key_row$/;"	f	class:BoardRenderer
+columns	lib/battleship/board.rb	/^  attr_reader :cells, :size, :rows, :columns$/;"	A
+columns	lib/battleship/board_placement.rb	/^  attr_reader :ship, :cells, :rows, :columns$/;"	A
+coordinate	lib/battleship/cell.rb	/^  attr_reader :coordinate$/;"	A
+coordinates	lib/battleship/board.rb	/^    def coordinates$/;"	f	class:Board
+empty?	lib/battleship/cell.rb	/^  def empty?$/;"	f	class:Cell
+fire_upon	lib/battleship/cell.rb	/^  def fire_upon$/;"	f	class:Cell
+fired_upon	lib/battleship/cell.rb	/^  attr_accessor :ship, :fired_upon$/;"	A
+fired_upon?	lib/battleship/cell.rb	/^  def fired_upon?$/;"	f	class:Cell
+health	lib/battleship/ship.rb	/^  attr_accessor :health$/;"	A
+hit	lib/battleship/ship.rb	/^  def hit$/;"	f	class:Ship
+increments?	lib/battleship/cell.rb	/^  def self.increments?(cells:)$/;"	S	class:Cell
+increments?	lib/battleship/core_extensions/array/increments.rb	/^        def increments?$/;"	f	module:Battleship.CoreExtensions.Array.Increments
+initialize	lib/battleship/board.rb	/^  def initialize(size: 4)$/;"	f	class:Board
+initialize	lib/battleship/board_placement.rb	/^  def initialize(ship:, cells:)$/;"	f	class:BoardPlacement
+initialize	lib/battleship/board_renderer.rb	/^  def initialize(rows:, show_hidden_ships: false)$/;"	f	class:BoardRenderer
+initialize	lib/battleship/cell.rb	/^  def initialize(coordinate:)$/;"	f	class:Cell
+initialize	lib/battleship/player.rb	/^  def initialize$/;"	f	class:Player
+initialize	lib/battleship/ship.rb	/^  def initialize(name:, length:)$/;"	f	class:Ship
+initialize	lib/battleship/ships/cruiser.rb	/^  def initialize$/;"	f	class:Cruiser
+initialize	lib/battleship/ships/submarine.rb	/^  def initialize$/;"	f	class:Submarine
+length	lib/battleship/ship.rb	/^  attr_reader :name, :length$/;"	A
+lost?	lib/battleship/player.rb	/^  def lost?$/;"	f	class:Player
+place_ship	lib/battleship/cell.rb	/^  def place_ship(new_ship:)$/;"	f	class:Cell
+place_ships	lib/battleship/players/computer_player.rb	/^    def place_ships$/;"	f	class:ComputerPlayer
+place_ships	lib/battleship/players/human_player.rb	/^    def place_ships$/;"	f	class:HumanPlayer
+play	lib/battleship/game.rb	/^  def play$/;"	f	class:Game
+render	lib/battleship/board.rb	/^  def render(show: false)$/;"	f	class:Board
+render	lib/battleship/board_renderer.rb	/^  def render$/;"	f	class:BoardRenderer
+render	lib/battleship/cell.rb	/^  def render(show_ship: false)$/;"	f	class:Cell
+render	lib/battleship/cell.rb	/^  def self.render(cells:, show_ship: false)$/;"	S	class:Cell
+render_rows	lib/battleship/board_renderer.rb	/^    def render_rows$/;"	f	class:BoardRenderer
+safe?	lib/battleship/cell.rb	/^  def safe?$/;"	f	class:Cell
+ships	lib/battleship/player.rb	/^  attr_reader :board, :ships$/;"	A
+show_hidden_ships	lib/battleship/board_renderer.rb	/^  attr_reader :rows, :show_hidden_ships$/;"	A
+sort	lib/battleship/cell.rb	/^  def self.sort(cells:)$/;"	S	class:Cell
+start_game?	lib/battleship/game.rb	/^    def start_game?$/;"	f	class:Game
+sunk?	lib/battleship/ship.rb	/^  def sunk?$/;"	f	class:Ship
+to_rows_and_columns	lib/battleship/cell.rb	/^  def self.to_rows_and_columns(cells:)$/;"	S	class:Cell
+valid?	lib/battleship/board_placement.rb	/^  def valid?$/;"	f	class:BoardPlacement
+valid_coordinate?	lib/battleship/board.rb	/^  def valid_coordinate?(coordinate:)$/;"	f	class:Board
+valid_horizontal_placement?	lib/battleship/board_placement.rb	/^    def valid_horizontal_placement?(rows:, columns:)$/;"	f	class:BoardPlacement
+valid_placement?	lib/battleship/board.rb	/^  def valid_placement?(ship:, coordinates:)$/;"	f	class:Board
+valid_placement?	lib/battleship/board_placement.rb	/^    def valid_placement?(constants:, increments:)$/;"	f	class:BoardPlacement
+valid_vertical_placement?	lib/battleship/board_placement.rb	/^    def valid_vertical_placement?(rows:, columns:)$/;"	f	class:BoardPlacement
