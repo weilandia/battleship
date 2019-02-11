@@ -2,6 +2,7 @@ class Battleship::Game
   def play
     puts "Welcome to BATTLESHIP\n"
     return unless start_game?
+    puts divider
 
     attacking_player, waiting_player = [Battleship::Player::Computer.new, Battleship::Player::Human.new]
 
@@ -18,5 +19,9 @@ class Battleship::Game
     def start_game?
       puts "Enter p to play. Enter q to quit."
       gets.chomp == "p"
+    end
+
+    def divider
+      "\n\n___________________________________\n\n"
     end
 end

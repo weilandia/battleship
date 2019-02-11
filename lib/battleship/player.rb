@@ -9,6 +9,6 @@ class Battleship::Player
   end
 
   def lost?
-    ships.all(&:sunk)
+    ships.all?(&:sunk?)
   end
 end

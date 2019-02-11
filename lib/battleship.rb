@@ -4,6 +4,8 @@ require "battleship/version"
 
 require "battleship/core_extensions/array/increments"
 
+require "battleship/services/random_ship_placement_finder"
+
 require "battleship/ship"
 require "battleship/ships/cruiser"
 require "battleship/ships/submarine"
@@ -21,4 +23,5 @@ require "battleship/game"
 
 module Battleship
   class Error < StandardError; end
+  class BoardSetupError < Error; end
 end
