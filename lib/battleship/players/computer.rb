@@ -33,6 +33,7 @@ class Battleship::Player::Computer < Battleship::Player
     end
 
     def get_targets(hits:)
+      # This is not as smart as it could be -- it can get confused with multuple ships. TO handle this, we'll need to match on hits.length == 1 AND ensure the hits are on the same ship
       if hits.length == 1
         get_perimeter(cell: hits[0])
       else
