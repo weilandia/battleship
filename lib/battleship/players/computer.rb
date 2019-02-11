@@ -6,7 +6,7 @@ class Battleship::Player::Computer < Battleship::Player
 
     if radar
       coordinate = radar[:targets].pop
-      cell = opponent.board.cells[coordinate]
+      cell = opponent.board.cells[coordinate] || valid_targets.sample
     else
       cell = valid_targets.sample
     end
@@ -21,16 +21,15 @@ class Battleship::Player::Computer < Battleship::Player
 
     def calibrate_radar(cell:)
       return if cell.empty?
+      return clear_radar if cell.ship.sunk?
 
-      if cell.ship.sunk?
-        self.radar = nil
-      else
-        self.radar = { hits: [], targets: [] } if radar.nil?
-        radar[:hits] << cell
-        radar[:targets] = get_targets(hits: radar[:hits])
-      end
+      self.radar = { hits: [], targets: [] } if radar.nil?
+      radar[:hits] << cell
+      radar[:targets] = get_targets(hits: radar[:hits])
+    end
 
-      puts radar
+    def clear_radar
+      self.radar = nil
     end
 
     def get_targets(hits:)
