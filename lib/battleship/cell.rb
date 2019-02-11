@@ -31,6 +31,14 @@ class Battleship::Cell
     end.increments?
   end
 
+  def self.safe?(cells:)
+    cells.select(&:safe?)
+  end
+
+  def self.transform_coord_ints(coord_ints:)
+    coord_ints.map { |coord_ints| [coord_ints[0].chr, coord_ints[1]].join }
+  end
+
   def initialize(coordinate:)
     @coordinate = coordinate
     @ship = nil
@@ -66,5 +74,17 @@ class Battleship::Cell
     return "X" if ship.sunk?
 
     "H"
+  end
+
+  def render_attack_result
+    return "shot on #{coordinate} was a miss." if empty?
+    return "shot on #{coordinate} has sunk a ship." if ship.sunk?
+
+    "shot on #{coordinate} has hit a ship."
+  end
+
+  def to_ints
+    row, column = coordinate.split("")
+    [row.ord, column.to_i]
   end
 end

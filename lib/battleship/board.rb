@@ -29,6 +29,10 @@ class Battleship::Board
     Battleship::BoardRenderer.call(rows: rows, show_hidden_ships: show)
   end
 
+  def safe_cells
+    Battleship::Cell.safe?(cells: cells.values)
+  end
+
   private
 
     def coordinates

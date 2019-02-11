@@ -6,6 +6,9 @@ class Battleship::Game
 
     attacking_player, waiting_player = [Battleship::Player::Computer.new, Battleship::Player::Human.new]
 
+    attacking_player.opponent = waiting_player
+    waiting_player.opponent = attacking_player
+
     until attacking_player.lost?
       attacking_player.take_turn
       attacking_player, waiting_player = [waiting_player, attacking_player]

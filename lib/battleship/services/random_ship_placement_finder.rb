@@ -21,7 +21,7 @@ class Battleship::RandomShipPlacementFinder
       valid_x_range.each_with_object([]) do |start_x, valid_coords|
         initial_y.upto(initial_y - 1 + board.size) do |y|
           coord_ints = range_by_length(start_x, ship.length).map { |x| rotate_axes([x, y]) }
-          coords = transform_coord_ints(coord_ints)
+          coords = Battleship::Cell.transform_coord_ints(coord_ints: coord_ints)
 
           if board.valid_placement?(ship: ship, coordinates: coords)
             valid_coords << coords
@@ -32,10 +32,6 @@ class Battleship::RandomShipPlacementFinder
 
     def valid_x_range
       range_by_length(initial_x, board.size - ship.length + 1)
-    end
-
-    def transform_coord_ints(coord_ints)
-      coord_ints.map { |coord_ints| [coord_ints[0].chr, coord_ints[1]].join }
     end
 
     def rotate_axes(coords)
